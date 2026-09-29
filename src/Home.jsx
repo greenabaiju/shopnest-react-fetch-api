@@ -14,9 +14,9 @@ const Home = () => {
 
   const getProducts = async () => {
     try {
-      const response = await fetch("https://fakestoreapi.com/products");
-      const data = await response.json();
-      setProducts(data);
+      let response = await fetch("https://fakestoreapi.com/products");
+       response = await response.json();
+      setProducts(response);
     } catch (error) {
       console.log(error);
     }
